@@ -1,0 +1,322 @@
+{
+  "about": {
+    "title": "À propos",
+    "version": "Version",
+    "description": "Application de blog simple réalisée avec Flask, SQLAlchemy, WTForms, Passlib, Tailwind CSS, DaisyUI, Tabler Icons",
+    "more_info": "Cliquez pour plus d'informations sur",
+    "source_repo": "code source",
+    "credits": "Fait avec <i class='ti ti-heart text-primary'></i> par <a href='https://github.com/Jelee0145/flaskblog_temp' target='_blank' class='link link-primary font-medium'>FlaskBlog Team</a>"
+  },
+  "account_settings": {
+    "title": "Paramètres du compte",
+    "username": "changer le nom d'utilisateur",
+    "password": "changer le mot de passe",
+    "delete": "supprimer le compte",
+    "language": "changer la langue",
+    "profile_picture": "changer la photo de profil"
+  },
+  "admin_panel": {
+    "title": "Panneau d'administration",
+    "users": "Utilisateurs",
+    "posts": "Articles",
+    "comments": "Commentaires"
+  },
+  "admin_panel_comments": {
+    "title": "Panneau d'administration - Commentaires",
+    "comments": "Commentaires",
+    "post_id": "ID de l'article",
+    "creation_time": "Heure de création",
+    "creation_date": "Date de création",
+    "author": "Auteur"
+  },
+  "admin_panel_users": {
+    "title": "Panneau d'administration - Utilisateurs",
+    "id": "ID",
+    "users": "Utilisateurs",
+    "email": "Email",
+    "join_time": "Heure d'inscription",
+    "join_date": "Date d'inscription",
+    "role": "Rôle",
+    "points": "Points",
+    "delete": "supprimer l'utilisateur",
+    "set_user": "définir le rôle de l'utilisateur en tant qu'utilisateur",
+    "set_admin": "définir le rôle de l'utilisateur en tant qu'administrateur"
+  },
+  "categories": {
+    "all": "Tous",
+    "apps": "Applications",
+    "art": "Art",
+    "books": "Livres",
+    "business": "Affaires",
+    "code": "Code",
+    "education": "Éducation",
+    "finance": "Finance",
+    "foods": "Nourriture",
+    "games": "Jeux",
+    "health": "Santé",
+    "history": "Histoire",
+    "movies": "Films",
+    "music": "Musique",
+    "nature": "Nature",
+    "science": "Science",
+    "series": "Séries",
+    "sports": "Sports",
+    "technology": "Technologie",
+    "travel": "Voyage",
+    "web": "Web",
+    "other": "Autre"
+  },
+  "change_language": {
+    "title": "Choisir la langue"
+  },
+  "change_password": {
+    "title": "Changer le mot de passe",
+    "current_password": "Mot de passe actuel",
+    "new_password": "Nouveau mot de passe",
+    "confirm_password": "Confirmer le mot de passe",
+    "change": "Changer le mot de passe"
+  },
+  "change_profile_picture": {
+    "title": "Changer la photo de profil",
+    "default": "la graine par défaut est votre nom d'utilisateur",
+    "info": "cliquez pour plus d'informations sur les graines de photo de profil",
+    "set": "Définir la photo de profil",
+    "placeholder": "Entrez la graine pour la photo de profil"
+  },
+  "change_user_name": {
+    "title": "Changer le nom d'utilisateur",
+    "placeholder": "Nouveau nom d'utilisateur",
+    "change": "Changer le nom d'utilisateur"
+  },
+  "create_post": {
+    "title": "Créer un article",
+    "title_placeholder": "titre de l'article",
+    "category": "Sélectionnez une catégorie",
+    "content": "Contenu",
+    "banner": "Télécharger une bannière",
+    "banner_placeholder": "bannière de l'article",
+    "tags": "étiquettes",
+    "post": "Publier",
+    "separate": "(Séparez les étiquettes par des virgules)",
+    "abstract": "Résumé",
+    "abstract_placeholder": "résumé de l'article"
+  },
+  "csrf_error": {
+    "reason": "Raison",
+    "description": "Remplissez à nouveau le même formulaire."
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "title_admin": "Panneau d'administration - Articles",
+    "posts": "Articles",
+    "comments": "Commentaires",
+    "tags": "Étiquettes",
+    "views": "Vues",
+    "creation_time": "Heure de création",
+    "creation_date": "Date de création",
+    "edit_time": "Dernière heure de modification",
+    "edit_date": "Dernière date de modification",
+    "author": "Auteur",
+    "category": "Catégorie",
+    "no_posts": "Cet utilisateur n'a pas encore créé d'articles.",
+    "no_post": "Pas encore d'article,",
+    "create": "créer un",
+    "go": "aller à l'article"
+  },
+  "edit_post": {
+    "title": "Modifier l'article",
+    "title_placeholder": "titre de l'article",
+    "category": "Sélectionner une catégorie",
+    "current": "Bannière actuelle",
+    "new": "Nouvelle bannière",
+    "tags": "étiquettes",
+    "separate": "(Séparez les étiquettes par des virgules)",
+    "save": "Enregistrer les modifications",
+    "banner_placeholder": "bannière de l'article",
+    "abstract": "Résumé",
+    "abstract_placeholder": "résumé de l'article"
+  },
+  "login": {
+    "title": "Connexion",
+    "username": "nom d'utilisateur",
+    "password": "mot de passe",
+    "forgot": "Mot de passe oublié ?"
+  },
+  "not_found": {
+    "text": "Je ne sais pas ce que c'est",
+    "sorry": "désolé",
+    "home": "aller à l'accueil"
+  },
+  "password_reset": {
+    "title": "Réinitialisation du mot de passe",
+    "email": "email",
+    "username": "nom d'utilisateur",
+    "send": "Envoyer un e-mail de réinitialisation",
+    "reset": "Réinitialiser le mot de passe",
+    "code": "Envoyer le code",
+    "code_placeholder": "Entrez le code que vous avez reçu",
+    "new_password": "Nouveau mot de passe",
+    "confirm_password": "Confirmer le mot de passe"
+  },
+  "post": {
+    "min_read": "min de lecture",
+    "placeholder": "Quelles sont vos pensées ?",
+    "view_performance": "Voir la Performance"
+  },
+  "sort_menu": {
+    "asc": "Croissant",
+    "desc": "Décroissant",
+    "create": "Date de création",
+    "title": "Titre",
+    "views": "Vues",
+    "category": "Catégorie",
+    "edit": "Dernière date de modification",
+    "hot": "Chaud"
+  },
+  "search": {
+    "title": "Recherche",
+    "no_results": "Aucun résultat",
+    "users": "Utilisateurs",
+    "posts": "Articles",
+    "results": "Résultats"
+  },
+  "search_bar": {
+    "title": "Recherche",
+    "placeholder": "recherche"
+  },
+  "signup": {
+    "title": "Inscription",
+    "username": "nom d'utilisateur",
+    "email": "email",
+    "password": "mot de passe",
+    "confirm": "confirmer le mot de passe",
+    "policy": "Politique de confidentialité",
+    "by": "En vous inscrivant, vous acceptez"
+  },
+  "user": {
+    "posts": "Articles",
+    "comments": "Commentaires",
+    "points": "Points",
+    "join_date": "Date d'inscription",
+    "create_date": "Date de création",
+    "create_time": "Heure de création",
+    "dashboard": "tableau de bord",
+    "role": "Rôle",
+    "user": "Utilisateur",
+    "admin": "administrateur",
+    "settings": "paramètres",
+    "views": "Vues",
+    "go": "aller à l'article"
+  },
+  "verify_user": {
+    "title": "Vérifier le compte",
+    "placeholder": "Entrez le code que vous avez reçu",
+    "send": "Cliquez pour envoyer le code de vérification"
+  },
+  "flash": {
+    "change_password": {
+      "same": "Le nouveau mot de passe ne peut pas être identique à l'ancien mot de passe.",
+      "match": "Les mots de passe ne correspondent pas.",
+      "success": "Le mot de passe a été modifié.",
+      "old": "L'ancien mot de passe est incorrect.",
+      "login": "Vous devez vous connecter pour changer votre mot de passe."
+    },
+    "change_profile_picture": {
+      "success": "La photo de profil a été changée."
+    },
+    "change_user_name": {
+      "same": "C'est déjà votre nom d'utilisateur.",
+      "success": "Le nom d'utilisateur a été modifié.",
+      "taken": "Ce nom d'utilisateur est déjà pris.",
+      "ascii": "Le nom d'utilisateur ne peut contenir que des caractères ASCII."
+    },
+    "create_post": {
+      "success": "Vous avez gagné 20 points pour avoir créé un article.",
+      "login": "Vous devez vous connecter pour créer un article.",
+      "empty": "Vous ne pouvez pas laisser le titre ou le contenu vide."
+    },
+    "dashboard": {
+      "login": "Vous devez vous connecter pour voir votre tableau de bord."
+    },
+    "edit_post": {
+      "success": "L'article a été modifié.",
+      "login": "Vous devez vous connecter pour modifier un article.",
+      "empty": "Vous ne pouvez pas laisser le titre ou le contenu vide.",
+      "author": "Vous ne pouvez pas modifier un article d'un autre auteur."
+    },
+    "login": {
+      "success": "Vous vous êtes connecté avec succès.",
+      "password": "Mot de passe incorrect",
+      "not_found": "Utilisateur non trouvé"
+    },
+    "logout": {
+      "success": "Vous vous êtes déconnecté avec succès."
+    },
+    "password_reset": {
+      "success": "Le mot de passe a été réinitialisé. Vous pouvez vous connecter avec votre nouveau mot de passe.",
+      "email": "L'email a été envoyé.",
+      "code": "Le code a été envoyé.",
+      "same": "Le nouveau mot de passe ne peut pas être identique à l'ancien mot de passe.",
+      "match": "Les mots de passe ne correspondent pas.",
+      "not_found": "Utilisateur non trouvé.",
+      "wrong": "Code incorrect."
+    },
+    "delete": {
+      "user": "L'utilisateur a été supprimé.",
+      "post": "L'article a été supprimé.",
+      "comment": "Le commentaire a été supprimé."
+    },
+    "set_language": {
+      "success": "La langue a été modifiée."
+    },
+    "post": {
+      "success": "Vous avez gagné 5 points en commentant."
+    },
+    "signup": {
+      "success": "Vous vous êtes inscrit avec succès.",
+      "ascii": "Le nom d'utilisateur ne peut contenir que des caractères ASCII.",
+      "username": "Ce nom d'utilisateur est déjà pris.",
+      "email": "Cet email est déjà pris.",
+      "password": "Les mots de passe ne correspondent pas.",
+      "taken": "Ce nom d'utilisateur et cet email sont déjà pris."
+    },
+    "verify_user": {
+      "success": "Votre compte a été vérifié.",
+      "code": "Le code a été envoyé.",
+      "not_found": "Utilisateur non trouvé.",
+      "wrong": "Code incorrect."
+    },
+    "error": {
+      "wrong_call": "Vous avez effectué un appel de message flash incorrect côté serveur."
+    }
+  },
+  "roles": {
+    "user": "Utilisateur",
+    "admin": "Administrateur"
+  },
+  "privacy_policy": {
+    "title": "Politique de Confidentialité",
+    "intro": "Cette Politique de Confidentialité décrit comment FlaskBlog Team's Flask Blog ('nous', 'notre') collecte, utilise et divulgue vos informations lorsque vous utilisez notre application mobile (l' 'App').",
+    "information": "Collecte et Utilisation des Informations",
+    "information_text": "Lorsque vous utilisez notre App, nous collectons et enregistrons divers types de données sur l'activité des utilisateurs, y compris mais sans s'y limiter :",
+    "information_user": "Données de connexion des utilisateurs : Nous collectons des informations liées aux activités de connexion des utilisateurs à des fins d'authentification et de sécurité.",
+    "information_post": "Données des articles et des commentaires : Nous collectons des informations sur les articles et les commentaires publiés dans l'App pour des raisons de fonctionnalité et d'engagement des utilisateurs.",
+    "information_general": "Activité générale des utilisateurs : Nous enregistrons diverses activités des utilisateurs au sein de l'App pour améliorer l'expérience utilisateur, résoudre les problèmes techniques et analyser les modèles d'utilisation.",
+    "cookies": "Cookies",
+    "cookies_text": "Notre App utilise des cookies pour améliorer l'expérience utilisateur. Les cookies que nous utilisons comprennent :",
+    "cookies_theme": "Cookie de thème UI : Nous stockons la préférence de thème UI sélectionnée par l'utilisateur pour personnaliser l'apparence de l'App.",
+    "cookies_language": "Langue par défaut du navigateur : Nous stockons la préférence de langue par défaut du navigateur de l'utilisateur pour fournir du contenu localisé.",
+    "service_providers": "Fournisseurs de services",
+    "service_providers_text": "Nous pouvons employer des entreprises ou des individus tiers pour faciliter notre App ou fournir des services en notre nom. Ces tiers peuvent avoir accès à vos informations pour effectuer des tâches telles que l'analyse, l'hébergement et le support technique. Cependant, ils sont tenus de ne pas divulguer ou utiliser ces informations à d'autres fins.",
+    "other_links": "Liens vers d'autres sites",
+    "other_links_text": "Notre App peut contenir des liens vers des sites externes, y compris X et le site personnel de FlaskBlog Team. Nous ne sommes pas responsables du contenu ou des pratiques de confidentialité de ces sites externes. Nous encourageons les utilisateurs à examiner les politiques de confidentialité de ces sites avant de fournir des informations personnelles.",
+    "security": "Sécurité",
+    "security_text": "Nous prenons des précautions raisonnables pour protéger les informations collectées par le biais de notre App. Cependant, veuillez noter qu'aucune méthode de transmission sur Internet ou méthode de stockage électronique n'est 100% sécurisée, et nous ne pouvons garantir une sécurité absolue.",
+    "children": "Confidentialité des enfants",
+    "children_text": "Notre App n'est pas destinée à être utilisée par des personnes de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles identifiables auprès des enfants de moins de 13 ans. Si vous êtes un parent ou un tuteur et que vous êtes conscient que votre enfant nous a fourni des informations personnelles, veuillez nous contacter afin que nous puissions prendre les mesures nécessaires.",
+    "changes": "Modifications de cette Politique de Confidentialité",
+    "changes_text": "Nous pouvons mettre à jour notre Politique de Confidentialité de temps en temps. Par conséquent, nous vous conseillons de consulter cette page périodiquement pour toute modification. Nous vous informerons de toute modification en publiant la nouvelle Politique de Confidentialité sur cette page. Ces modifications sont effectives immédiatement après leur publication sur cette page.",
+    "contact": "Nous Contacter",
+    "contact_text": "Si vous avez des questions ou des suggestions concernant notre Politique de Confidentialité, n'hésitez pas à nous contacter. Mail :"
+  }
+}

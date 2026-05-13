@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block head %}
+<title>{{ translations.change_language.title }}</title>
+{% endblock head %} {% block body %}
+
+<div class="hero min-h-[calc(100vh-8rem)]">
+    <div class="card bg-base-200 w-full max-w-md shadow-xl">
+        <div class="card-body">
+            <h1 class="card-title text-2xl font-bold justify-center mb-4">
+                {{ translations.change_language.title }}
+            </h1>
+
+            <div class="grid grid-cols-2 gap-2">
+                <a href="/set-language/tr" class="btn btn-ghost justify-start">🇹🇷 Türkçe</a>
+                <a href="/set-language/en" class="btn btn-ghost justify-start">🇬🇧 English</a>
+                <a href="/set-language/de" class="btn btn-ghost justify-start">🇩🇪 Deutsch</a>
+                <a href="/set-language/es" class="btn btn-ghost justify-start">🇪🇸 Español</a>
+                <a href="/set-language/pl" class="btn btn-ghost justify-start">🇵🇱 Polski</a>
+                <a href="/set-language/fr" class="btn btn-ghost justify-start">🇫🇷 Français</a>
+                <a href="/set-language/pt" class="btn btn-ghost justify-start">🇵🇹 Português</a>
+                <a href="/set-language/uk" class="btn btn-ghost justify-start">🇺🇦 Українська</a>
+                <a href="/set-language/ru" class="btn btn-ghost justify-start">🇷🇺 Русский</a>
+                <a href="/set-language/ja" class="btn btn-ghost justify-start">🇯🇵 日本人</a>
+                <a href="/set-language/zh" class="btn btn-ghost justify-start">🇨🇳 中国人</a>
+                <a href="/set-language/hi" class="btn btn-ghost justify-start">🇮🇳 हिन्दी</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

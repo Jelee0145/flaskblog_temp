@@ -1,0 +1,30 @@
+{% extends 'layout.html'%} {%block head%}
+<title>{{translations.login.title}}</title>
+{% endblock head %} {%block body%}
+<div class="hero min-h-[calc(100vh-8rem)]">
+    <div class="card bg-base-200 w-full max-w-sm shadow-xl">
+        <form method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <div class="card-body">
+                <h1 class="card-title text-2xl font-bold justify-center">
+                    {{translations.login.title}}
+                </h1>
+                <fieldset class="fieldset">
+                    <label class="label">{{translations.login.username}}</label>
+                    {{form.username(autocomplete="off", class="input input-bordered w-full")}}
+                    <label class="label">{{translations.login.password}}</label>
+                    {{form.password(autocomplete="off", class="input input-bordered w-full")}}
+                    <div class="mt-1">
+                        <a class="link link-hover link-primary text-sm" href="/password_reset/codesent=false">
+                            {{translations.login.forgot}}
+                        </a>
+                    </div>
+                    <button class="btn btn-primary mt-4" type="submit">
+                        {{translations.login.title}}
+                    </button>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,127 @@
+{% extends 'layout.html'%} {%block head%}
+<title>{{user[1]}}</title>
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="{{user[1]}}" />
+<meta property="og:image" content="{{user[4]}}" />
+<meta property="og:url" content="{{request.base_url}}" />
+<meta property="og:site_name" content="{{app_name}}" />
+<meta property="og:description" content="{{ user[1] }}'s Profile" />
+<meta name="twitter:image" content="{{user[4]}}" />
+<meta name="twitter:description" content="{{ user[1] }}'s Profile" />
+<meta name="twitter:title" content="{{user[1]}}" />
+{% endblock head %} {%block body%}
+
+<div class="container mx-auto px-4 max-w-4xl">
+    <div class="card bg-base-200 shadow-lg mt-8">
+        <div class="card-body">
+            <div class="flex flex-col items-center mb-4">
+                <div class="avatar mb-2">
+                    <div class="w-20 rounded-xl">
+                        <img src="{{user[4]}}" alt="{{user[1]}}" />
+                    </div>
+                </div>
+                <h2 class="card-title">{{user[1]}}</h2>
+            </div>
+
+            <div class="stats stats-vertical lg:stats-horizontal shadow bg-base-100">
+                <div class="stat">
+                    <div class="stat-figure text-primary">
+                        <i class="ti ti-user text-2xl"></i>
+                    </div>
+                    <div class="stat-title">{{translations.user.role}}</div>
+                    <div class="stat-value text-lg">
+                        {% if user[5] == "admin"%}
+                            {{translations.roles.admin}}
+                        {% elif user[5] == "user"%}
+                            {{translations.roles.user}}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <i class="ti ti-eye text-2xl"></i>
+                    </div>
+                    <div class="stat-title">{{translations.user.views}}</div>
+                    <div class="stat-value text-lg">{{views}}</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure text-accent">
+                        <i class="ti ti-sparkles text-2xl"></i>
+                    </div>
+                    <div class="stat-title">{{translations.user.points}}</div>
+                    <div class="stat-value text-lg">{{user[6]}}</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure text-info">
+                        <i class="ti ti-calendar text-2xl"></i>
+                    </div>
+                    <div class="stat-title">{{translations.user.join_date}}</div>
+                    <div class="stat-value text-lg date">{{user[7]}}</div>
+                </div>
+            </div>
+
+            {% if session["username"] == user[1] %}
+            <div class="divider"></div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/account-settings" class="btn btn-ghost text-base-content hover:text-primary">
+                    <i class="ti ti-settings text-xl"></i>
+                    {{translations.user.settings}}
+                </a>
+                <a href="/dashboard/{{user[1]}}" class="btn btn-ghost text-base-content hover:text-primary">
+                    <i class="ti ti-clipboard-text text-xl"></i>
+                    {{translations.user.dashboard}}
+                </a>
+                {% if user[5] == "admin" %}
+                <a href="/admin" class="btn btn-ghost text-base-content hover:text-primary">
+                    <i class="ti ti-tie text-xl"></i>
+                    {{translations.user.admin}}
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if show_posts %}
+    <h2 class="text-2xl font-bold text-primary text-center mt-8 mb-6">
+        {{translations.user.posts}}
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for post in posts %}
+            {% from "components/post_card_macro.html" import post_card %}
+            {{ post_card(post=post, author_profile_picture=get_profile_picture(post[5])) }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if show_comments %}
+    <h2 class="text-2xl font-bold text-primary text-center mt-8 mb-6">
+        {{translations.user.comments}}
+    </h2>
+    <div class="space-y-4 max-w-2xl mx-auto mb-8">
+        {% for comment in comments %}
+        <div class="card bg-base-200 shadow">
+            <div class="card-body p-4">
+                <p class="text-base-content/80">{{ comment[2] | e }}</p>
+                <div class="flex flex-wrap justify-between items-center text-sm text-base-content/60 mt-2">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1">
+                            <i class="ti ti-clock"></i>
+                            <span class="time">{{comment[4]}}</span>
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <i class="ti ti-calendar"></i>
+                            <span class="date">{{comment[4]}}</span>
+                        </span>
+                    </div>
+                    <a href="/post/{{ url_id(comment[1]) }}" class="btn btn-ghost btn-xs text-primary">
+                        {{translations.user.go}}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock body %}

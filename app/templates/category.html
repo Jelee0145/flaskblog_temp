@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {% block head %}
+<title>flaskBlog - {{ category }}</title>
+{% endblock head %} {% block body %}
+
+<div class="container mx-auto px-4">
+    <h1 class="text-3xl font-bold text-primary text-center mt-8 mb-6">
+        {{ category }}
+    </h1>
+
+    <div class="flex justify-between items-center max-w-6xl mx-auto">
+        {% from "components/category_container.html" import category_container %}
+        {{ category_container(translations, category) }}
+        {% from "components/sort_menu.html" import sort_menu %}
+        {{ sort_menu(sort_name, source, translations) }}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8 max-w-7xl mx-auto">
+        {% for post in posts %}
+            {% from "components/post_card_macro.html" import post_card with context %}
+            {{ post_card(post=post, author_profile_picture=get_profile_picture(post[5])) }}
+        {% endfor %}
+    </div>
+
+    {% from "components/pagination.html" import pagination %}
+    {{ pagination(page, total_pages, request.path) }}
+
+    {% from "components/footer.html" import footer %}
+    {{ footer(translations) }}
+</div>
+{% endblock body %}

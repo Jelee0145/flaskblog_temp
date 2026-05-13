@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Flask Blog"
+type: software
+authors:
+  - given-names: FlaskBlog Team
+    family-names: Ürker
+    email: team@flaskblog.local
+repository-code: https://github.com/Jelee0145/flaskblog_temp
+url: https://github.com/Jelee0145/flaskblog_temp
+abstract: "A modern blog application built with Flask, featuring user authentication, post management, and a clean TailwindUI interface."
+keywords:
+  - flask
+  - blog
+  - python
+  - web-application
+  - sqlite
+  - tailwind
+license: MIT
+

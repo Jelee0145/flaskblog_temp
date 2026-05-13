@@ -1,0 +1,77 @@
+<div class="navbar bg-base-100 px-4 lg:px-8 mt-4">
+    <div class="navbar-start">
+        <a href="/" class="btn btn-ghost btn-circle">
+            <img
+                src="/static/favicon.ico"
+                class="w-10 h-10 rounded"
+                alt="flaskBlog"
+            />
+        </a>
+    </div>
+
+    <div class="navbar-center hidden md:flex">
+        <div class="join">
+            <input
+                type="text"
+                id="search-input"
+                autocomplete="off"
+                placeholder="{{translations.search_bar.placeholder}}"
+                class="input input-bordered join-item w-64"
+            />
+            <button onclick="search()" class="btn btn-primary join-item">
+                <i class="ti ti-search text-xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="navbar-end gap-1">
+        <a href="/search-bar" class="btn btn-ghost btn-square md:hidden">
+            <i class="ti ti-search text-2xl"></i>
+        </a>
+
+        {% if session["username"] %}
+            <a href="/user/{{ session['username'].lower() }}" class="btn btn-ghost btn-circle">
+                <div class="avatar">
+                    <div class="w-8 rounded-full">
+                        <img src="{{ get_profile_picture(session['username']) }}" alt="Profile" />
+                    </div>
+                </div>
+            </a>
+            <a href="/create-post" class="btn btn-ghost btn-square">
+                <i class="ti ti-pencil-plus text-2xl"></i>
+            </a>
+            <a href="/logout" title="logout" class="btn btn-ghost btn-square">
+                <i class="ti ti-logout text-2xl"></i>
+            </a>
+        {% elif hide_login %}
+            {% if is_registration %}
+                <a href="/signup" class="btn btn-ghost btn-square">
+                    <i class="ti ti-user-plus text-2xl"></i>
+                </a>
+            {% endif %}
+        {% elif hide_sign_up %}
+            {% if is_login %}
+                <a href="/login/redirect=&" class="btn btn-ghost btn-square">
+                    <i class="ti ti-login text-2xl"></i>
+                </a>
+            {% endif %}
+        {% else %}
+            {% if is_login %}
+                <a href="/login/redirect=&" class="btn btn-ghost btn-square">
+                    <i class="ti ti-login text-2xl"></i>
+                </a>
+            {% endif %}
+            {% if is_registration %}
+                <a href="/signup" class="btn btn-ghost btn-square">
+                    <i class="ti ti-user-plus text-2xl"></i>
+                </a>
+            {% endif %}
+        {% endif %}
+
+        <button onclick="theme_modal.showModal()" class="btn btn-ghost btn-square">
+            <i class="ti ti-palette text-2xl"></i>
+        </button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+</div>

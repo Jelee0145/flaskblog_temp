@@ -1,0 +1,83 @@
+{% macro category_container(translations, category) %}
+
+<div class="dropdown">
+    <div
+        tabindex="0"
+        role="button"
+        class="btn w-full md:w-fit text-base-content"
+    >
+        {{ category }}
+    </div>
+    <ul
+        tabindex="0"
+        class="dropdown-content menu bg-base-100 rounded-box z-1 w-72 p-2 shadow-sm"
+    >
+        <li>
+            <a href="/">{{ translations.categories.all }}</a>
+        </li>
+        <li>
+            <a href="/category/Apps">{{ translations.categories.apps }}</a>
+        </li>
+        <li>
+            <a href="/category/Art">{{ translations.categories.art }}</a>
+        </li>
+        <li>
+            <a href="/category/Books">{{ translations.categories.books }}</a>
+        </li>
+        <li>
+            <a href="/category/Business">{{ translations.categories.business }}</a>
+        </li>
+        <li>
+            <a href="/category/Code">{{ translations.categories.code }}</a>
+        </li>
+        <li>
+            <a href="/category/Education">{{ translations.categories.education }}</a>
+        </li>
+        <li>
+            <a href="/category/Finance">{{ translations.categories.finance }}</a>
+        </li>
+        <li>
+            <a href="/category/Foods">{{ translations.categories.foods }}</a>
+        </li>
+        <li>
+            <a href="/category/Games">{{ translations.categories.games }}</a>
+        </li>
+        <li>
+            <a href="/category/Health">{{ translations.categories.health }}</a>
+        </li>
+        <li>
+            <a href="/category/History">{{ translations.categories.history }}</a>
+        </li>
+        <li>
+            <a href="/category/Movies">{{ translations.categories.movies }}</a>
+        </li>
+        <li>
+            <a href="/category/Music">{{ translations.categories.music }}</a>
+        </li>
+        <li>
+            <a href="/category/Nature">{{ translations.categories.nature }}</a>
+        </li>
+        <li>
+            <a href="/category/Science">{{ translations.categories.science }}</a>
+        </li>
+        <li>
+            <a href="/category/Series">{{ translations.categories.series }}</a>
+        </li>
+        <li>
+            <a href="/category/Sports">{{ translations.categories.sports }}</a>
+        </li>
+        <li>
+            <a href="/category/Technology">{{ translations.categories.technology }}</a>
+        </li>
+        <li>
+            <a href="/category/Travel">{{ translations.categories.travel }}</a>
+        </li>
+        <li>
+            <a href="/category/Web">{{ translations.categories.web }}</a>
+        </li>
+        <li>
+            <a href="/category/Other">{{ translations.categories.other }}</a>
+        </li>
+    </ul>
+</div>
+{% endmacro %}

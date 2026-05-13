@@ -1,0 +1,56 @@
+name: code-quality
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.py"
+      - "app/pyproject.toml"
+      - "Makefile"
+      - ".github/workflows/code-quality.yaml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**.py"
+      - "app/pyproject.toml"
+      - "Makefile"
+      - ".github/workflows/code-quality.yaml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ruff-check:
+    name: lint & format check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+
+      - name: set up python 3.14
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: "app/pyproject.toml"
+
+      - name: install dependencies
+        run: make install
+
+      - name: run ci checks
+        run: make ci
+
+      - name: generate ruff report
+        if: failure()
+        run: |
+          echo "## ruff issues found" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cd app && uv run ruff check --output-format=text .. >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY

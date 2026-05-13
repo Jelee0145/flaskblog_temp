@@ -1,0 +1,98 @@
+{% extends 'layout.html' %} {% block head %}
+<title>{{translations.admin_panel_users.title}}</title>
+{% endblock head %} {% block body %}
+
+<div class="container mx-auto px-4 max-w-4xl">
+    <h1 class="text-3xl font-bold text-center mt-8 mb-6">
+        {{translations.admin_panel_users.users}}
+    </h1>
+
+    <div class="space-y-4">
+        {% for user in users %}
+        <div class="card bg-base-200 shadow-lg">
+            <div class="card-body">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <div class="avatar">
+                        <div class="w-16 rounded-xl">
+                            <img src="{{ user[4] }}" alt="{{ user[1] }}" />
+                        </div>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <a href="/user/{{ user[1].lower() }}" class="text-xl font-bold link link-primary">
+                            {{ user[1] }}
+                        </a>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <span class="badge badge-ghost">ID: {{ user[0] }}</span>
+                            {% if user[5] == "admin"%}
+                            <span class="badge badge-primary">{{translations.roles.admin}}</span>
+                            {% elif user[5] == "user"%}
+                            <span class="badge badge-secondary">{{translations.roles.user}}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider my-2"></div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-mail text-lg"></i>
+                        <span class="text-base-content/70">{{translations.admin_panel_users.email}}:</span>
+                        <span class="font-medium break-all">{{ user[2] }}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-sparkles text-lg"></i>
+                        <span class="text-base-content/70">{{translations.admin_panel_users.points}}:</span>
+                        <span class="font-medium">{{ user[6] }}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-calendar text-lg"></i>
+                        <span class="text-base-content/70">{{translations.admin_panel_users.join_date}}:</span>
+                        <span class="date font-medium">{{ user[7] }}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="ti ti-clock text-lg"></i>
+                        <span class="text-base-content/70">{{translations.admin_panel_users.join_time}}:</span>
+                        <span class="time font-medium">{{ user[7] }}</span>
+                    </div>
+                </div>
+
+                <div class="card-actions justify-end mt-4">
+                    <form method="post">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        <input type="hidden" name="username" value="{{ user[1] }}" />
+                        <button type="submit" name="user_delete_button" class="btn btn-ghost btn-sm text-error">
+                            <i class="ti ti-trash text-lg"></i>
+                            <span class="hidden sm:inline">{{translations.admin_panel_users.delete}}</span>
+                        </button>
+                    </form>
+
+                    <form method="post">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        <input type="hidden" name="username" value="{{ user[1] }}" />
+                        <button type="submit" name="user_role_change_button" class="btn btn-ghost btn-sm text-base-content hover:text-primary">
+                            {% if user[5] == "admin" %}
+                            <i class="ti ti-user-down text-lg"></i>
+                            <span class="hidden sm:inline">{{translations.admin_panel_users.set_user}}</span>
+                            {% else %}
+                            <i class="ti ti-user-up text-lg"></i>
+                            <span class="hidden sm:inline">{{translations.admin_panel_users.set_admin}}</span>
+                            {% endif %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% from "components/pagination.html" import pagination %}
+    {{ pagination(page, total_pages, request.path) }}
+
+    <div class="fixed bottom-4 left-4">
+        <a href="/admin" class="btn btn-circle btn-ghost text-base-content hover:text-primary">
+            <i class="ti ti-arrow-back text-xl"></i>
+        </a>
+    </div>
+</div>
+{% endblock body %}

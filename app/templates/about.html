@@ -1,0 +1,47 @@
+{% extends 'layout.html' %} {% block head %}
+<title>{{ translations.about.title }} {{ app_name }}</title>
+{% endblock head %} {% block body %}
+
+<div class="hero min-h-[calc(100vh-8rem)]">
+    <div class="hero-content text-center">
+        <div class="max-w-lg">
+            <a
+                class="text-4xl font-bold text-primary hover:text-primary/80 transition-colors"
+                href="/"
+                target="_blank"
+            >
+                {{ app_name }}
+            </a>
+
+            <p class="badge badge-ghost mt-2">
+                {{ translations.about.version }}: {{ app_version }}
+            </p>
+
+            <p class="py-6 text-base-content/80">
+                {{ translations.about.description }}
+            </p>
+
+            <a
+                href="https://github.com/Jelee0145/flaskblog_temp"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                <i class="ti ti-brand-github text-xl"></i>
+                {{ translations.about.more_info }} {{ app_name }}
+            </a>
+
+            <footer class="mt-8 text-xs text-base-content/60">
+                <a
+                    href="https://github.com/Jelee0145/flaskblog_temp"
+                    target="_blank"
+                    class="link link-primary block mb-1"
+                >
+                    {{ translations.about.source_repo }}
+                </a>
+                {{ translations.about.credits | safe }}
+            </footer>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+

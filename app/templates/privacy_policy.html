@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>{{translations.privacy_policy.title}}</title>
+{% endblock head %}
+{% block body %}
+
+<div class="container mx-auto px-4 max-w-3xl mt-8 mb-8">
+    <article class="prose prose-lg max-w-none">
+        <h1>{{translations.privacy_policy.title}}</h1>
+        <p>{{translations.privacy_policy.intro}}</p>
+
+        <h2>{{translations.privacy_policy.information}}</h2>
+        <p>{{translations.privacy_policy.information_text}}</p>
+        <ul>
+            <li>{{translations.privacy_policy.information_user}}</li>
+            <li>{{translations.privacy_policy.information_post}}</li>
+            <li>{{translations.privacy_policy.information_general}}</li>
+        </ul>
+
+        <h2>{{translations.privacy_policy.cookies}}</h2>
+        <p>{{translations.privacy_policy.cookies_text}}</p>
+        <ul>
+            <li>{{translations.privacy_policy.cookies_theme}}</li>
+            <li>{{translations.privacy_policy.cookies_language}}</li>
+        </ul>
+
+        <h2>{{translations.privacy_policy.service_providers}}</h2>
+        <p>{{translations.privacy_policy.service_providers_text}}</p>
+
+        <h2>{{translations.privacy_policy.other_links}}</h2>
+        <p>{{translations.privacy_policy.other_links_text}}</p>
+
+        <h2>{{translations.privacy_policy.security}}</h2>
+        <p>{{translations.privacy_policy.security_text}}</p>
+
+        <h2>{{translations.privacy_policy.children}}</h2>
+        <p>{{translations.privacy_policy.children_text}}</p>
+
+        <h2>{{translations.privacy_policy.changes}}</h2>
+        <p>{{translations.privacy_policy.changes_text}}</p>
+
+        <h2>{{translations.privacy_policy.contact}}</h2>
+        <p>
+            {{translations.privacy_policy.contact_text}}
+            <a href="mailto:admin@flaskblog.local" class="link link-primary">admin@flaskblog.local</a>.
+        </p>
+    </article>
+
+    {% from "components/footer.html" import footer %}
+    {{ footer(translations) }}
+</div>
+{% endblock body %}

@@ -1,0 +1,120 @@
+<dialog id="theme_modal" class="modal">
+    <div class="modal-box w-11/12 max-w-3xl">
+        <h3 class="text-lg font-bold mb-4">Choose Theme</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+            <a href="{{ url_for('set_theme.set_theme', theme='light') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'light' %}btn-active{% endif %}">
+                <span class="text-lg">☀️</span> Light
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='dark') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'dark' %}btn-active{% endif %}">
+                <span class="text-lg">🌙</span> Dark
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='cupcake') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'cupcake' %}btn-active{% endif %}">
+                <span class="text-lg">🧁</span> Cupcake
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='bumblebee') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'bumblebee' %}btn-active{% endif %}">
+                <span class="text-lg">🐝</span> Bumblebee
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='emerald') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'emerald' %}btn-active{% endif %}">
+                <span class="text-lg">💚</span> Emerald
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='corporate') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'corporate' %}btn-active{% endif %}">
+                <span class="text-lg">🏢</span> Corporate
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='synthwave') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'synthwave' %}btn-active{% endif %}">
+                <span class="text-lg">🌊</span> Synthwave
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='retro') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'retro' %}btn-active{% endif %}">
+                <span class="text-lg">📺</span> Retro
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='cyberpunk') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'cyberpunk' %}btn-active{% endif %}">
+                <span class="text-lg">🤖</span> Cyberpunk
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='valentine') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'valentine' %}btn-active{% endif %}">
+                <span class="text-lg">💝</span> Valentine
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='halloween') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'halloween' %}btn-active{% endif %}">
+                <span class="text-lg">🎃</span> Halloween
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='garden') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'garden' %}btn-active{% endif %}">
+                <span class="text-lg">🌻</span> Garden
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='forest') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'forest' %}btn-active{% endif %}">
+                <span class="text-lg">🌲</span> Forest
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='aqua') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'aqua' %}btn-active{% endif %}">
+                <span class="text-lg">💧</span> Aqua
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='lofi') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'lofi' %}btn-active{% endif %}">
+                <span class="text-lg">🎵</span> Lo-fi
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='pastel') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'pastel' %}btn-active{% endif %}">
+                <span class="text-lg">🎨</span> Pastel
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='fantasy') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'fantasy' %}btn-active{% endif %}">
+                <span class="text-lg">🦄</span> Fantasy
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='wireframe') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'wireframe' %}btn-active{% endif %}">
+                <span class="text-lg">📐</span> Wireframe
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='black') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'black' %}btn-active{% endif %}">
+                <span class="text-lg">⚫</span> Black
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='luxury') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'luxury' %}btn-active{% endif %}">
+                <span class="text-lg">💎</span> Luxury
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='dracula') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'dracula' %}btn-active{% endif %}">
+                <span class="text-lg">🧛</span> Dracula
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='cmyk') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'cmyk' %}btn-active{% endif %}">
+                <span class="text-lg">🖨️</span> CMYK
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='autumn') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'autumn' %}btn-active{% endif %}">
+                <span class="text-lg">🍂</span> Autumn
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='business') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'business' %}btn-active{% endif %}">
+                <span class="text-lg">💼</span> Business
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='acid') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'acid' %}btn-active{% endif %}">
+                <span class="text-lg">🟢</span> Acid
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='lemonade') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'lemonade' %}btn-active{% endif %}">
+                <span class="text-lg">🍋</span> Lemonade
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='night') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'night' %}btn-active{% endif %}">
+                <span class="text-lg">🌃</span> Night
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='coffee') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'coffee' %}btn-active{% endif %}">
+                <span class="text-lg">☕</span> Coffee
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='winter') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'winter' %}btn-active{% endif %}">
+                <span class="text-lg">❄️</span> Winter
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='dim') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'dim' %}btn-active{% endif %}">
+                <span class="text-lg">🔅</span> Dim
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='nord') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'nord' %}btn-active{% endif %}">
+                <span class="text-lg">🗻</span> Nord
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='sunset') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'sunset' %}btn-active{% endif %}">
+                <span class="text-lg">🌅</span> Sunset
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='caramellatte') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'caramellatte' %}btn-active{% endif %}">
+                <span class="text-lg">🍯</span> Caramel Latte
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='abyss') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'abyss' %}btn-active{% endif %}">
+                <span class="text-lg">🖤</span> Abyss
+            </a>
+            <a href="{{ url_for('set_theme.set_theme', theme='silk') }}" class="btn btn-sm btn-ghost justify-start {% if session.get('theme') == 'silk' %}btn-active{% endif %}">
+                <span class="text-lg">🎀</span> Silk
+            </a>
+        </div>
+        <div class="modal-action">
+            <form method="dialog">
+                <button class="btn">Close</button>
+            </form>
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>

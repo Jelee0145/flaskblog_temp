@@ -1,0 +1,322 @@
+{
+  "about": {
+    "title": "About",
+    "version": "Version",
+    "description": "Simple blog app made with Flask, SQLAlchemy, WTForms, Passlib, Tailwind CSS, DaisyUI, Tabler Icons",
+    "more_info": "Click for more information about",
+    "source_repo": "source code",
+    "credits": "Made with <i class='ti ti-heart text-primary'></i> by <a href='https://github.com/Jelee0145/flaskblog_temp' target='_blank' class='link link-primary font-medium'>FlaskBlog Team</a>"
+  },
+  "account_settings": {
+    "title": "Account Settings",
+    "username": "change username",
+    "password": "change password",
+    "delete": "delete account",
+    "language": "change language",
+    "profile_picture": "change profile picture"
+  },
+  "admin_panel": {
+    "title": "Admin Panel",
+    "users": "Users",
+    "posts": "Posts",
+    "comments": "Comments"
+  },
+  "admin_panel_comments": {
+    "title": "Admin Panel - Comments",
+    "comments": "Comments",
+    "post_id": "Post ID",
+    "creation_time": "Creation Time",
+    "creation_date": "Creation Date",
+    "author": "Author"
+  },
+  "admin_panel_users": {
+    "title": "Admin Panel - Users",
+    "id": "ID",
+    "users": "Users",
+    "email": "Email",
+    "join_time": "Join Time",
+    "join_date": "Join Date",
+    "role": "Role",
+    "points": "Points",
+    "delete": "delete user",
+    "set_user": "set user role to user",
+    "set_admin": "set user role to admin"
+  },
+  "categories": {
+    "all": "All",
+    "apps": "Apps",
+    "art": "Art",
+    "books": "Books",
+    "business": "Business",
+    "code": "Code",
+    "education": "Education",
+    "finance": "Finance",
+    "foods": "Foods",
+    "games": "Games",
+    "health": "Health",
+    "history": "History",
+    "movies": "Movies",
+    "music": "Music",
+    "nature": "Nature",
+    "science": "Science",
+    "series": "Series",
+    "sports": "Sports",
+    "technology": "Technology",
+    "travel": "Travel",
+    "web": "Web",
+    "other": "Other"
+  },
+  "change_language": {
+    "title": "Select Language"
+  },
+  "change_password": {
+    "title": "Change Password",
+    "current_password": "Current Password",
+    "new_password": "New Password",
+    "confirm_password": "Confirm Password",
+    "change": "Change Password"
+  },
+  "change_profile_picture": {
+    "title": "Change Profile Picture",
+    "default": "default seed is your username",
+    "info": "click for more information about profile picture seeds",
+    "set": "Set Profile Picture",
+    "placeholder": "Enter seed for profile picture"
+  },
+  "change_user_name": {
+    "title": "Change Username",
+    "placeholder": "New Username",
+    "change": "Change Username"
+  },
+  "create_post": {
+    "title": "Create Post",
+    "title_placeholder": "post title",
+    "category": "Select a Category",
+    "content": "Content",
+    "banner": "Upload a Banner",
+    "banner_placeholder": "post banner",
+    "tags": "tags",
+    "post": "Post",
+    "separate": "(Separate tags with commas)",
+    "abstract": "Abstract",
+    "abstract_placeholder": "post abstract"
+  },
+  "csrf_error": {
+    "reason": "Reason",
+    "description": "Fill the same form again."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "title_admin": "Admin Panel - Posts",
+    "posts": "Posts",
+    "comments": "Comments",
+    "tags": "Tags",
+    "views": "Views",
+    "creation_time": "Creation Time",
+    "creation_date": "Creation Date",
+    "edit_time": "Last Edit Time",
+    "edit_date": "Last Edit Date",
+    "author": "Author",
+    "category": "Category",
+    "no_posts": "This users hasn't created any posts yet.",
+    "no_post": "No post yet,",
+    "create": "create one",
+    "go": "go to post"
+  },
+  "edit_post": {
+    "title": "Edit Post",
+    "title_placeholder": "post title",
+    "category": "Select a Category",
+    "current": "Current Banner",
+    "new": "New Banner",
+    "tags": "tags",
+    "separate": "(Separate tags with commas)",
+    "save": "Save Changes",
+    "banner_placeholder": "post banner",
+    "abstract": "Abstract",
+    "abstract_placeholder": "post abstract"
+  },
+  "login": {
+    "title": "Login",
+    "username": "username",
+    "password": "password",
+    "forgot": "Forgot Password?"
+  },
+  "not_found": {
+    "text": "I don't know what is",
+    "sorry": "sorry",
+    "home": "go to home"
+  },
+  "password_reset": {
+    "title": "Password Reset",
+    "email": "email",
+    "username": "username",
+    "send": "Send Reset Email",
+    "reset": "Reset Password",
+    "code": "Send Code",
+    "code_placeholder": "Enter the code you received",
+    "new_password": "New Password",
+    "confirm_password": "Confirm Password"
+  },
+  "post": {
+    "min_read": "min read",
+    "placeholder": "What are your thoughts?",
+    "view_performance": "View Performance"
+  },
+  "sort_menu": {
+    "asc": "Ascending",
+    "desc": "Descending",
+    "create": "Creation Date",
+    "title": "Title",
+    "views": "Views",
+    "category": "Category",
+    "edit": "Last Edit Date",
+    "hot": "Hot"
+  },
+  "search": {
+    "title": "Search",
+    "no_results": "No results",
+    "users": "Users",
+    "posts": "Posts",
+    "results": "Results"
+  },
+  "search_bar": {
+    "title": "Search",
+    "placeholder": "search"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "username": "username",
+    "email": "email",
+    "password": "password",
+    "confirm": "confirm password",
+    "policy": "Privacy Policy",
+    "by": "By signing up, you accept"
+  },
+  "user": {
+    "posts": "Posts",
+    "comments": "Comments",
+    "points": "Points",
+    "join_date": "Join Date",
+    "create_date": "Creation Date",
+    "create_time": "Creation Time",
+    "dashboard": "dashboard",
+    "role": "Role",
+    "user": "User",
+    "admin": "admin",
+    "settings": "settings",
+    "views": "Views",
+    "go": "go to post"
+  },
+  "verify_user": {
+    "title": "Verify Account",
+    "placeholder": "Enter the code you received",
+    "send": "Click to send verification code"
+  },
+  "flash": {
+    "change_password": {
+      "same": "New password can not be same with old password.",
+      "match": "Passwords do not match.",
+      "success": "Password has been changed.",
+      "old": "Old password is wrong.",
+      "login": "You need to login to change your password."
+    },
+    "change_profile_picture": {
+      "success": "Profile picture has been changed."
+    },
+    "change_user_name": {
+      "same": "This is already your username.",
+      "success": "Username has been changed.",
+      "taken": "This username is already taken.",
+      "ascii": "Username can only contain ASCII characters."
+    },
+    "create_post": {
+      "success": "You earned 20 points for creating a post.",
+      "login": "You need to login to create a post.",
+      "empty": "You can not leave title or content empty."
+    },
+    "dashboard": {
+      "login": "You need to login to see your dashboard."
+    },
+    "edit_post": {
+      "success": "Post has been edited.",
+      "login": "You need to login to edit a post.",
+      "empty": "You can not leave title or content empty.",
+      "author": "You can not edit someone else's post."
+    },
+    "login": {
+      "success": "You have successfully logged in.",
+      "password": "Wrong password",
+      "not_found": "User not found"
+    },
+    "logout": {
+      "success": "You have successfully logged out."
+    },
+    "password_reset": {
+      "success": "Password has been reset. You can login with your new password.",
+      "email": "Email has been sent.",
+      "code": "Code has been sent.",
+      "same": "New password can not be same with old password.",
+      "match": "Passwords do not match.",
+      "not_found": "User not found.",
+      "wrong": "Wrong code."
+    },
+    "delete": {
+      "user": "User has been deleted.",
+      "post": "Post has been deleted.",
+      "comment": "Comment has been deleted."
+    },
+    "set_language": {
+      "success": "Language has been changed."
+    },
+    "post": {
+      "success": "You earned 5 points by commenting."
+    },
+    "signup": {
+      "success": "You have successfully signed up.",
+      "ascii": "Username can only contain ASCII characters.",
+      "username": "This username is already taken.",
+      "email": "This email is already taken.",
+      "password": "Passwords do not match.",
+      "taken": "This username and email is already taken."
+    },
+    "verify_user": {
+      "success": "Your account has been verified.",
+      "code": "Code has been sent.",
+      "not_found": "User not found.",
+      "wrong": "Wrong code."
+    },
+    "error": {
+      "wrong_call": "You made a wrong flash message call on server side."
+    }
+  },
+  "roles": {
+    "user": "User",
+    "admin": "Admin"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy describes how FlaskBlog Team's Flask Blog ('we', 'us', or 'our') collects, uses, and discloses your information when you use our mobile application (the 'App').",
+    "information": "Information Collection and Use",
+    "information_text": "When you use our App, we collect and log various types of user activity data, including but not limited to:",
+    "information_user": "User login data: We collect information related to user login activities for authentication and security purposes.",
+    "information_post": "Post and comment data: We collect information about posts and comments made within the App for functionality and user engagement purposes.",
+    "information_general": "General user activity: We log various user activities within the App to improve user experience, troubleshoot technical issues, and analyze usage patterns.",
+    "cookies": "Cookies",
+    "cookies_text": "Our App uses cookies to enhance the user experience. The cookies we use include:",
+    "cookies_theme": "UI theme cookie: We store the user's selected UI theme preference to personalize the appearance of the App.",
+    "cookies_language": "Browser default language: We store the user's browser default language preference to provide localized content.",
+    "service_providers": "Service Providers",
+    "service_providers_text": "We may employ third-party companies or individuals to facilitate our App or provide services on our behalf. These third parties may have access to your information to perform tasks such as analytics, hosting, and technical support. However, they are obligated not to disclose or use it for any other purpose.",
+    "other_links": "Links to Other Sites",
+    "other_links_text": "Our App may contain links to external sites, including X and FlaskBlog Team's personal site. We are not responsible for the content or privacy practices of such external sites. We encourage users to review the privacy policies of these sites before providing any personal information.",
+    "security": "Security",
+    "security_text": "We take reasonable precautions to protect the information collected through our App. However, lease be aware that no method of transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.",
+    "children": "Children's Privacy",
+    "children_text": "Our App is not intended for use by individuals under the age of 13. We do not knowingly collect personal identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to take necessary actions.",
+    "changes": "Changes to This Privacy Policy",
+    "changes_text": "We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.",
+    "contact": "Contact Us",
+    "contact_text": "If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us. Mail:"
+  }
+}
